@@ -7,23 +7,21 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
-
-@end
+#import "UIView+Additions.h"
 
 @implementation ViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.view.name = @"Donald Duck";
 }
 
-- (void)didReceiveMemoryWarning
+
+- (void)viewDidAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewDidAppear:animated];
+    NSLog(@"The view is named '%@'", self.view.name);
 }
 
 @end

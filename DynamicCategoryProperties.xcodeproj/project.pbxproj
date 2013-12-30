@@ -13,15 +13,16 @@
 		EA9918EE18720BBB00FC4D0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA9918EC18720BBB00FC4D0E /* InfoPlist.strings */; };
 		EA9918F018720BBB00FC4D0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9918EF18720BBB00FC4D0E /* main.m */; };
 		EA9918F418720BBB00FC4D0E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9918F318720BBB00FC4D0E /* AppDelegate.m */; };
-		EA9918F718720BBB00FC4D0E /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9918F518720BBB00FC4D0E /* Main_iPhone.storyboard */; };
-		EA9918FA18720BBB00FC4D0E /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9918F818720BBB00FC4D0E /* Main_iPad.storyboard */; };
-		EA9918FD18720BBB00FC4D0E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9918FC18720BBB00FC4D0E /* ViewController.m */; };
+		EA9918F718720BBB00FC4D0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9918F518720BBB00FC4D0E /* Main.storyboard */; };
 		EA9918FF18720BBB00FC4D0E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9918FE18720BBB00FC4D0E /* Images.xcassets */; };
 		EA99190618720BBB00FC4D0E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA99190518720BBB00FC4D0E /* XCTest.framework */; };
 		EA99190718720BBB00FC4D0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9918E318720BBB00FC4D0E /* Foundation.framework */; };
 		EA99190818720BBB00FC4D0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9918E718720BBB00FC4D0E /* UIKit.framework */; };
 		EA99191018720BBB00FC4D0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA99190E18720BBB00FC4D0E /* InfoPlist.strings */; };
 		EA99191218720BBB00FC4D0E /* DynamicCategoryPropertiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA99191118720BBB00FC4D0E /* DynamicCategoryPropertiesTests.m */; };
+		EA99191F1872159200FC4D0E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA99191E1872159200FC4D0E /* ViewController.m */; };
+		EA9919261872166100FC4D0E /* NSObject+CategoryProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9919251872166100FC4D0E /* NSObject+CategoryProperties.m */; };
+		EA9919291872168000FC4D0E /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9919281872168000FC4D0E /* UIView+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,16 +46,19 @@
 		EA9918F118720BBB00FC4D0E /* DynamicCategoryProperties-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DynamicCategoryProperties-Prefix.pch"; sourceTree = "<group>"; };
 		EA9918F218720BBB00FC4D0E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA9918F318720BBB00FC4D0E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EA9918F618720BBB00FC4D0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		EA9918F918720BBB00FC4D0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		EA9918FB18720BBB00FC4D0E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EA9918FC18720BBB00FC4D0E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EA9918F618720BBB00FC4D0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA9918FE18720BBB00FC4D0E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EA99190418720BBB00FC4D0E /* DynamicCategoryPropertiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicCategoryPropertiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA99190518720BBB00FC4D0E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		EA99190D18720BBB00FC4D0E /* DynamicCategoryPropertiesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DynamicCategoryPropertiesTests-Info.plist"; sourceTree = "<group>"; };
 		EA99190F18720BBB00FC4D0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA99191118720BBB00FC4D0E /* DynamicCategoryPropertiesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicCategoryPropertiesTests.m; sourceTree = "<group>"; };
+		EA99191D1872159200FC4D0E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EA99191E1872159200FC4D0E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EA9919241872166100FC4D0E /* NSObject+CategoryProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CategoryProperties.h"; sourceTree = "<group>"; };
+		EA9919251872166100FC4D0E /* NSObject+CategoryProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CategoryProperties.m"; sourceTree = "<group>"; tabWidth = 4; };
+		EA9919271872168000FC4D0E /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		EA9919281872168000FC4D0E /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +118,12 @@
 		EA9918E918720BBB00FC4D0E /* DynamicCategoryProperties */ = {
 			isa = PBXGroup;
 			children = (
+				EA9919231872162700FC4D0E /* NSObject+CategoryProperties */,
+				EA99191C1872156B00FC4D0E /* Views & Controllers */,
+				EA99191B1872155300FC4D0E /* Categories */,
 				EA9918F218720BBB00FC4D0E /* AppDelegate.h */,
 				EA9918F318720BBB00FC4D0E /* AppDelegate.m */,
-				EA9918F518720BBB00FC4D0E /* Main_iPhone.storyboard */,
-				EA9918F818720BBB00FC4D0E /* Main_iPad.storyboard */,
-				EA9918FB18720BBB00FC4D0E /* ViewController.h */,
-				EA9918FC18720BBB00FC4D0E /* ViewController.m */,
+				EA9918F518720BBB00FC4D0E /* Main.storyboard */,
 				EA9918FE18720BBB00FC4D0E /* Images.xcassets */,
 				EA9918EA18720BBB00FC4D0E /* Supporting Files */,
 			);
@@ -153,6 +157,33 @@
 				EA99190E18720BBB00FC4D0E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA99191B1872155300FC4D0E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				EA9919271872168000FC4D0E /* UIView+Additions.h */,
+				EA9919281872168000FC4D0E /* UIView+Additions.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		EA99191C1872156B00FC4D0E /* Views & Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA99191D1872159200FC4D0E /* ViewController.h */,
+				EA99191E1872159200FC4D0E /* ViewController.m */,
+			);
+			path = "Views & Controllers";
+			sourceTree = "<group>";
+		};
+		EA9919231872162700FC4D0E /* NSObject+CategoryProperties */ = {
+			isa = PBXGroup;
+			children = (
+				EA9919241872166100FC4D0E /* NSObject+CategoryProperties.h */,
+				EA9919251872166100FC4D0E /* NSObject+CategoryProperties.m */,
+			);
+			path = "NSObject+CategoryProperties";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +262,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA9918FA18720BBB00FC4D0E /* Main_iPad.storyboard in Resources */,
 				EA9918FF18720BBB00FC4D0E /* Images.xcassets in Resources */,
-				EA9918F718720BBB00FC4D0E /* Main_iPhone.storyboard in Resources */,
+				EA9918F718720BBB00FC4D0E /* Main.storyboard in Resources */,
 				EA9918EE18720BBB00FC4D0E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,8 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA9918FD18720BBB00FC4D0E /* ViewController.m in Sources */,
+				EA99191F1872159200FC4D0E /* ViewController.m in Sources */,
 				EA9918F418720BBB00FC4D0E /* AppDelegate.m in Sources */,
+				EA9919261872166100FC4D0E /* NSObject+CategoryProperties.m in Sources */,
+				EA9919291872168000FC4D0E /* UIView+Additions.m in Sources */,
 				EA9918F018720BBB00FC4D0E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,20 +318,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		EA9918F518720BBB00FC4D0E /* Main_iPhone.storyboard */ = {
+		EA9918F518720BBB00FC4D0E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EA9918F618720BBB00FC4D0E /* Base */,
 			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		EA9918F818720BBB00FC4D0E /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EA9918F918720BBB00FC4D0E /* Base */,
-			);
-			name = Main_iPad.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		EA99190E18720BBB00FC4D0E /* InfoPlist.strings */ = {
@@ -396,6 +420,7 @@
 				GCC_PREFIX_HEADER = "DynamicCategoryProperties/DynamicCategoryProperties-Prefix.pch";
 				INFOPLIST_FILE = "DynamicCategoryProperties/DynamicCategoryProperties-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -409,6 +434,7 @@
 				GCC_PREFIX_HEADER = "DynamicCategoryProperties/DynamicCategoryProperties-Prefix.pch";
 				INFOPLIST_FILE = "DynamicCategoryProperties/DynamicCategoryProperties-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
