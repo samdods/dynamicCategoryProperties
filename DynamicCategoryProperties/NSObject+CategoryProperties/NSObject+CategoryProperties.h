@@ -10,4 +10,6 @@
 
 @interface NSObject (CategoryProperties)
 + (void)implementDynamicPropertyAccessors;
++ (void)implementDynamicPropertyAccessorsForPropertyName:(NSString *)propertyName;
++ (void)implementDynamicPropertyAccessorsForPropertyMatching:(NSString *)regexString;
 @end

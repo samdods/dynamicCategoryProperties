@@ -14,20 +14,39 @@
 
 + (void)implementDynamicPropertyAccessors
 {
-    [self enumeratePropertiesWithBlock:^(objc_property_t property) {
+    [self implementDynamicPropertyAccessorsForPropertyMatching:nil];
+}
+
+
++ (void)implementDynamicPropertyAccessorsForPropertyName:(NSString *)propertyName
+{
+    [self implementDynamicPropertyAccessorsForPropertyMatching:[NSString stringWithFormat:@"^%@$", propertyName]];
+}
+
+
++ (void)implementDynamicPropertyAccessorsForPropertyMatching:(NSString *)regexString
+{
+    [self enumeratePropertiesMatching:regexString withBlock:^(objc_property_t property) {
         [self implementAccessorsIfNecessaryForProperty:property];
     }];
 }
 
 
-+ (void)enumeratePropertiesWithBlock:(void(^)(objc_property_t property))block
++ (void)enumeratePropertiesMatching:(NSString *)regexString withBlock:(void(^)(objc_property_t property))block
 {
     NSParameterAssert(block);
     uint count = 0;
     objc_property_t *properties = class_copyPropertyList(self, &count);
     for (uint i = 0; i < count; i++) {
         objc_property_t property = properties[i];
-        block(property);
+        BOOL isMatch = !regexString || ({
+            NSString *propertyName = [NSString stringWithUTF8String:property_getName(property)];
+            NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexString options:0 error:NULL];
+            [regex numberOfMatchesInString:propertyName options:0 range:NSMakeRange(0, propertyName.length)];
+        });
+        if (isMatch) {
+            block(property);
+        }
     }
     free(properties);
 }
@@ -59,7 +78,8 @@
     }
     
     const char *name = property_getName(property);
-    const void *key = [[NSUUID new].UUIDString cStringUsingEncoding:NSUTF8StringEncoding];
+    const void *key = &key;
+    key++;
     
     [self implementGetterIfNecessaryForPropertyName:name customGetterName:customGetterName key:key];
     
