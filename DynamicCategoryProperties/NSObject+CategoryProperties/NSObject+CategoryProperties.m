@@ -77,10 +77,10 @@
         return;
     }
     
-    const char *name = property_getName(property);
     const void *key = &key;
     key++;
     
+    const char *name = property_getName(property);
     [self implementGetterIfNecessaryForPropertyName:name customGetterName:customGetterName key:key];
     
     BOOL isReadonly = [attributes containsObject:@"R"];
