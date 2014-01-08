@@ -1,5 +1,5 @@
 //
-//  NSObject+CategoryProperties.m
+//  NSObject+DZLCategoryProperties.m
 //  DynamicCategoryProperties
 //
 //  Created by Sam Dods on 30/12/2013.
@@ -7,10 +7,10 @@
 //
 
 #import <objc/runtime.h>
-#import "NSObject+CategoryProperties.h"
+#import "NSObject+DZLCategoryProperties.h"
 
 
-@implementation NSObject (CategoryProperties)
+@implementation NSObject (DZLCategoryProperties)
 
 + (void)implementDynamicPropertyAccessors
 {

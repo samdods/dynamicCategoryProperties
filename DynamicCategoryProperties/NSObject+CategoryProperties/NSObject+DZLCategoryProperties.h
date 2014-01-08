@@ -1,5 +1,5 @@
 //
-//  NSObject+CategoryProperties.h
+//  NSObject+DZLCategoryProperties.h
 //  DynamicCategoryProperties
 //
 //  Created by Sam Dods on 30/12/2013.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (CategoryProperties)
+@interface NSObject (DZLCategoryProperties)
 + (void)implementDynamicPropertyAccessors;
 + (void)implementDynamicPropertyAccessorsForPropertyName:(NSString *)propertyName;
 + (void)implementDynamicPropertyAccessorsForPropertyMatching:(NSString *)regexString;

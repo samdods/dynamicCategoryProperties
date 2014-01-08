@@ -7,7 +7,7 @@
 //
 
 #import "UIView+Additions.h"
-#import "NSObject+CategoryProperties.h"
+#import "NSObject+DZLCategoryProperties.h"
 
 @implementation UIView (Additions)
 @dynamic name;
