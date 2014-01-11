@@ -9,7 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (DZLCategoryProperties)
++ (void)DZL_implementDynamicPropertyAccessors;
++ (void)DZL_implementDynamicPropertyAccessorsForPropertyName:(NSString *)propertyName;
++ (void)DZL_implementDynamicPropertyAccessorsForPropertyMatching:(NSString *)regexString;
+@end
+
+
+#ifdef DZL_CP_SHORTHAND
+@interface NSObject (DZLCategoryPropertiesShorthand)
 + (void)implementDynamicPropertyAccessors;
 + (void)implementDynamicPropertyAccessorsForPropertyName:(NSString *)propertyName;
 + (void)implementDynamicPropertyAccessorsForPropertyMatching:(NSString *)regexString;
 @end
+#endif

@@ -21,8 +21,8 @@
 		EA99191018720BBB00FC4D0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA99190E18720BBB00FC4D0E /* InfoPlist.strings */; };
 		EA99191218720BBB00FC4D0E /* DynamicCategoryPropertiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA99191118720BBB00FC4D0E /* DynamicCategoryPropertiesTests.m */; };
 		EA99191F1872159200FC4D0E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA99191E1872159200FC4D0E /* ViewController.m */; };
-		EA9919261872166100FC4D0E /* NSObject+DZLCategoryProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9919251872166100FC4D0E /* NSObject+DZLCategoryProperties.m */; };
 		EA9919291872168000FC4D0E /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9919281872168000FC4D0E /* UIView+Additions.m */; };
+		EAF4B95B1881B1D3007F8E60 /* NSObject+DZLCategoryProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF4B95A1881B1D3007F8E60 /* NSObject+DZLCategoryProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +55,10 @@
 		EA99191118720BBB00FC4D0E /* DynamicCategoryPropertiesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicCategoryPropertiesTests.m; sourceTree = "<group>"; };
 		EA99191D1872159200FC4D0E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EA99191E1872159200FC4D0E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		EA9919241872166100FC4D0E /* NSObject+DZLCategoryProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DZLCategoryProperties.h"; sourceTree = "<group>"; };
-		EA9919251872166100FC4D0E /* NSObject+DZLCategoryProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DZLCategoryProperties.m"; sourceTree = "<group>"; tabWidth = 4; };
 		EA9919271872168000FC4D0E /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
 		EA9919281872168000FC4D0E /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		EAF4B9591881B1D3007F8E60 /* NSObject+DZLCategoryProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DZLCategoryProperties.h"; sourceTree = "<group>"; };
+		EAF4B95A1881B1D3007F8E60 /* NSObject+DZLCategoryProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DZLCategoryProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +88,9 @@
 		EA9918D718720BBB00FC4D0E = {
 			isa = PBXGroup;
 			children = (
-				EA9918E918720BBB00FC4D0E /* DynamicCategoryProperties */,
-				EA99190B18720BBB00FC4D0E /* DynamicCategoryPropertiesTests */,
+				EAF4B9581881B1D3007F8E60 /* NSObject+DZLCategoryProperties */,
+				EA9918E918720BBB00FC4D0E /* Example */,
+				EA99190B18720BBB00FC4D0E /* ExampleTests */,
 				EA9918E218720BBB00FC4D0E /* Frameworks */,
 				EA9918E118720BBB00FC4D0E /* Products */,
 			);
@@ -115,10 +116,9 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EA9918E918720BBB00FC4D0E /* DynamicCategoryProperties */ = {
+		EA9918E918720BBB00FC4D0E /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				EA9919231872162700FC4D0E /* NSObject+CategoryProperties */,
 				EA99191C1872156B00FC4D0E /* Views & Controllers */,
 				EA99191B1872155300FC4D0E /* Categories */,
 				EA9918F218720BBB00FC4D0E /* AppDelegate.h */,
@@ -127,6 +127,7 @@
 				EA9918FE18720BBB00FC4D0E /* Images.xcassets */,
 				EA9918EA18720BBB00FC4D0E /* Supporting Files */,
 			);
+			name = Example;
 			path = DynamicCategoryProperties;
 			sourceTree = "<group>";
 		};
@@ -141,12 +142,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EA99190B18720BBB00FC4D0E /* DynamicCategoryPropertiesTests */ = {
+		EA99190B18720BBB00FC4D0E /* ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
 				EA99191118720BBB00FC4D0E /* DynamicCategoryPropertiesTests.m */,
 				EA99190C18720BBB00FC4D0E /* Supporting Files */,
 			);
+			name = ExampleTests;
 			path = DynamicCategoryPropertiesTests;
 			sourceTree = "<group>";
 		};
@@ -177,13 +179,14 @@
 			path = "Views & Controllers";
 			sourceTree = "<group>";
 		};
-		EA9919231872162700FC4D0E /* NSObject+CategoryProperties */ = {
+		EAF4B9581881B1D3007F8E60 /* NSObject+DZLCategoryProperties */ = {
 			isa = PBXGroup;
 			children = (
-				EA9919241872166100FC4D0E /* NSObject+DZLCategoryProperties.h */,
-				EA9919251872166100FC4D0E /* NSObject+DZLCategoryProperties.m */,
+				EAF4B9591881B1D3007F8E60 /* NSObject+DZLCategoryProperties.h */,
+				EAF4B95A1881B1D3007F8E60 /* NSObject+DZLCategoryProperties.m */,
 			);
-			path = "NSObject+CategoryProperties";
+			name = "NSObject+DZLCategoryProperties";
+			path = "../NSObject+DZLCategoryProperties";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,8 +287,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA99191F1872159200FC4D0E /* ViewController.m in Sources */,
+				EAF4B95B1881B1D3007F8E60 /* NSObject+DZLCategoryProperties.m in Sources */,
 				EA9918F418720BBB00FC4D0E /* AppDelegate.m in Sources */,
-				EA9919261872166100FC4D0E /* NSObject+DZLCategoryProperties.m in Sources */,
 				EA9919291872168000FC4D0E /* UIView+Additions.m in Sources */,
 				EA9918F018720BBB00FC4D0E /* main.m in Sources */,
 			);
@@ -500,6 +503,7 @@
 				EA99191718720BBB00FC4D0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA99191818720BBB00FC4D0E /* Build configuration list for PBXNativeTarget "DynamicCategoryPropertiesTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +512,7 @@
 				EA99191A18720BBB00FC4D0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

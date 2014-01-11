@@ -9,22 +9,41 @@
 #import <objc/runtime.h>
 #import "NSObject+DZLCategoryProperties.h"
 
+void dzl_duplicateClassMethod(Class aClass, SEL originalSelector, SEL newSelector)
+{
+    Method method = class_getClassMethod(aClass, originalSelector);
+    if (method) {
+        IMP originalImplementation = method_getImplementation(method);
+        class_addMethod(aClass, newSelector, originalImplementation, method_getTypeEncoding(method));
+    }
+}
+
 
 @implementation NSObject (DZLCategoryProperties)
 
-+ (void)implementDynamicPropertyAccessors
++ (void)load
 {
-    [self implementDynamicPropertyAccessorsForPropertyMatching:nil];
+#ifdef DZL_CP_SHORTHAND
+    dzl_duplicateClassMethod(self, @selector(DZL_implementDynamicPropertyAccessors), @selector(implementDynamicPropertyAccessors));
+    dzl_duplicateClassMethod(self, @selector(DZL_implementDynamicPropertyAccessorsForPropertyName:), @selector(implementDynamicPropertyAccessorsForPropertyName:));
+    dzl_duplicateClassMethod(self, @selector(DZL_implementDynamicPropertyAccessorsForPropertyMatching:), @selector(implementDynamicPropertyAccessorsForPropertyMatching:));
+#endif
 }
 
 
-+ (void)implementDynamicPropertyAccessorsForPropertyName:(NSString *)propertyName
++ (void)DZL_implementDynamicPropertyAccessors
 {
-    [self implementDynamicPropertyAccessorsForPropertyMatching:[NSString stringWithFormat:@"^%@$", propertyName]];
+    [self DZL_implementDynamicPropertyAccessorsForPropertyMatching:nil];
 }
 
 
-+ (void)implementDynamicPropertyAccessorsForPropertyMatching:(NSString *)regexString
++ (void)DZL_implementDynamicPropertyAccessorsForPropertyName:(NSString *)propertyName
+{
+    [self DZL_implementDynamicPropertyAccessorsForPropertyMatching:[NSString stringWithFormat:@"^%@$", propertyName]];
+}
+
+
++ (void)DZL_implementDynamicPropertyAccessorsForPropertyMatching:(NSString *)regexString
 {
     [self enumeratePropertiesMatching:regexString withBlock:^(objc_property_t property) {
         [self implementAccessorsIfNecessaryForProperty:property];
