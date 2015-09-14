@@ -119,7 +119,7 @@ void dzl_duplicateClassMethod(Class aClass, SEL originalSelector, SEL newSelecto
 {
     SEL getter = NSSelectorFromString(customGetterName ?: [NSString stringWithFormat:@"%s", propertyName]);
     [self implementMethodIfNecessaryForSelector:getter parameterTypes:NULL block:^id(id _self) {
-        return objc_getAssociatedObject(self, key);
+        return objc_getAssociatedObject(_self, key);
     }];
 }
 
@@ -137,7 +137,7 @@ void dzl_duplicateClassMethod(Class aClass, SEL originalSelector, SEL newSelecto
     
     SEL setter = NSSelectorFromString(customSetterName ?: [NSString stringWithFormat:@"set%c%s:", toupper(*propertyName), propertyName + 1]);
     [self implementMethodIfNecessaryForSelector:setter parameterTypes:"@" block:^(id _self, id var) {
-        objc_setAssociatedObject(self, key, var, associationPolicy);
+        objc_setAssociatedObject(_self, key, var, associationPolicy);
     }];
 }
 
