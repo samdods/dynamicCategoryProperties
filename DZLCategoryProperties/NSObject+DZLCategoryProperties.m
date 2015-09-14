@@ -96,10 +96,13 @@ void dzl_duplicateClassMethod(Class aClass, SEL originalSelector, SEL newSelecto
         return;
     }
     
-    const void *key = &key;
-    key++;
-    
     const char *name = property_getName(property);
+
+    // Creating a selector from the name of the property seems reasonable,
+    // even if they've created a custom getter or setter it's unlikely that they
+    // have another associated object with the same name.
+    const void *key = NSSelectorFromString([NSString stringWithFormat:@"%s", name]);
+
     [self implementGetterIfNecessaryForPropertyName:name customGetterName:customGetterName key:key];
     
     BOOL isReadonly = [attributes containsObject:@"R"];
@@ -119,7 +122,7 @@ void dzl_duplicateClassMethod(Class aClass, SEL originalSelector, SEL newSelecto
 {
     SEL getter = NSSelectorFromString(customGetterName ?: [NSString stringWithFormat:@"%s", propertyName]);
     [self implementMethodIfNecessaryForSelector:getter parameterTypes:NULL block:^id(id _self) {
-        return objc_getAssociatedObject(self, key);
+        return objc_getAssociatedObject(_self, key);
     }];
 }
 
@@ -137,7 +140,7 @@ void dzl_duplicateClassMethod(Class aClass, SEL originalSelector, SEL newSelecto
     
     SEL setter = NSSelectorFromString(customSetterName ?: [NSString stringWithFormat:@"set%c%s:", toupper(*propertyName), propertyName + 1]);
     [self implementMethodIfNecessaryForSelector:setter parameterTypes:"@" block:^(id _self, id var) {
-        objc_setAssociatedObject(self, key, var, associationPolicy);
+        objc_setAssociatedObject(_self, key, var, associationPolicy);
     }];
 }
 
