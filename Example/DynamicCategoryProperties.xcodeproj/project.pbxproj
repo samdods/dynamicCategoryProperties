@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		526BFE281BA6EE7A007B5348 /* BasicObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 526BFE271BA6EE7A007B5348 /* BasicObject.m */; settings = {ASSET_TAGS = (); }; };
+		526BFE2B1BA6EED0007B5348 /* BasicObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 526BFE2A1BA6EED0007B5348 /* BasicObject+Properties.m */; settings = {ASSET_TAGS = (); }; };
+		526BFE2F1BA6EF7F007B5348 /* NSObject+DZLCategoryProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 526BFE2E1BA6EF7F007B5348 /* NSObject+DZLCategoryProperties.m */; settings = {ASSET_TAGS = (); }; };
 		EA9918E418720BBB00FC4D0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9918E318720BBB00FC4D0E /* Foundation.framework */; };
 		EA9918E618720BBB00FC4D0E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9918E518720BBB00FC4D0E /* CoreGraphics.framework */; };
 		EA9918E818720BBB00FC4D0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9918E718720BBB00FC4D0E /* UIKit.framework */; };
@@ -22,7 +25,6 @@
 		EA99191218720BBB00FC4D0E /* DynamicCategoryPropertiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA99191118720BBB00FC4D0E /* DynamicCategoryPropertiesTests.m */; };
 		EA99191F1872159200FC4D0E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA99191E1872159200FC4D0E /* ViewController.m */; };
 		EA9919291872168000FC4D0E /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9919281872168000FC4D0E /* UIView+Additions.m */; };
-		EAF4B95B1881B1D3007F8E60 /* NSObject+DZLCategoryProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF4B95A1881B1D3007F8E60 /* NSObject+DZLCategoryProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		526BFE261BA6EE7A007B5348 /* BasicObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicObject.h; sourceTree = "<group>"; };
+		526BFE271BA6EE7A007B5348 /* BasicObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicObject.m; sourceTree = "<group>"; };
+		526BFE291BA6EED0007B5348 /* BasicObject+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BasicObject+Properties.h"; sourceTree = "<group>"; };
+		526BFE2A1BA6EED0007B5348 /* BasicObject+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BasicObject+Properties.m"; sourceTree = "<group>"; };
+		526BFE2D1BA6EF7F007B5348 /* NSObject+DZLCategoryProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DZLCategoryProperties.h"; sourceTree = "<group>"; };
+		526BFE2E1BA6EF7F007B5348 /* NSObject+DZLCategoryProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DZLCategoryProperties.m"; sourceTree = "<group>"; };
 		EA9918E018720BBB00FC4D0E /* DynamicCategoryProperties.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicCategoryProperties.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9918E318720BBB00FC4D0E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA9918E518720BBB00FC4D0E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -57,8 +65,6 @@
 		EA99191E1872159200FC4D0E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EA9919271872168000FC4D0E /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
 		EA9919281872168000FC4D0E /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
-		EAF4B9591881B1D3007F8E60 /* NSObject+DZLCategoryProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DZLCategoryProperties.h"; sourceTree = "<group>"; };
-		EAF4B95A1881B1D3007F8E60 /* NSObject+DZLCategoryProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DZLCategoryProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +91,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		526BFE2C1BA6EF7F007B5348 /* DZLCategoryProperties */ = {
+			isa = PBXGroup;
+			children = (
+				526BFE2D1BA6EF7F007B5348 /* NSObject+DZLCategoryProperties.h */,
+				526BFE2E1BA6EF7F007B5348 /* NSObject+DZLCategoryProperties.m */,
+			);
+			name = DZLCategoryProperties;
+			path = ../DZLCategoryProperties;
+			sourceTree = "<group>";
+		};
 		EA9918D718720BBB00FC4D0E = {
 			isa = PBXGroup;
 			children = (
-				EAF4B9581881B1D3007F8E60 /* NSObject+DZLCategoryProperties */,
+				526BFE2C1BA6EF7F007B5348 /* DZLCategoryProperties */,
 				EA9918E918720BBB00FC4D0E /* Example */,
 				EA99190B18720BBB00FC4D0E /* ExampleTests */,
 				EA9918E218720BBB00FC4D0E /* Frameworks */,
@@ -145,6 +161,10 @@
 		EA99190B18720BBB00FC4D0E /* ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				526BFE261BA6EE7A007B5348 /* BasicObject.h */,
+				526BFE271BA6EE7A007B5348 /* BasicObject.m */,
+				526BFE291BA6EED0007B5348 /* BasicObject+Properties.h */,
+				526BFE2A1BA6EED0007B5348 /* BasicObject+Properties.m */,
 				EA99191118720BBB00FC4D0E /* DynamicCategoryPropertiesTests.m */,
 				EA99190C18720BBB00FC4D0E /* Supporting Files */,
 			);
@@ -177,16 +197,6 @@
 				EA99191E1872159200FC4D0E /* ViewController.m */,
 			);
 			path = "Views & Controllers";
-			sourceTree = "<group>";
-		};
-		EAF4B9581881B1D3007F8E60 /* NSObject+DZLCategoryProperties */ = {
-			isa = PBXGroup;
-			children = (
-				EAF4B9591881B1D3007F8E60 /* NSObject+DZLCategoryProperties.h */,
-				EAF4B95A1881B1D3007F8E60 /* NSObject+DZLCategoryProperties.m */,
-			);
-			name = "NSObject+DZLCategoryProperties";
-			path = "../NSObject+DZLCategoryProperties";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,11 +245,6 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Sam Dods";
-				TargetAttributes = {
-					EA99190318720BBB00FC4D0E = {
-						TestTargetID = EA9918DF18720BBB00FC4D0E;
-					};
-				};
 			};
 			buildConfigurationList = EA9918DB18720BBB00FC4D0E /* Build configuration list for PBXProject "DynamicCategoryProperties" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -287,7 +292,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA99191F1872159200FC4D0E /* ViewController.m in Sources */,
-				EAF4B95B1881B1D3007F8E60 /* NSObject+DZLCategoryProperties.m in Sources */,
 				EA9918F418720BBB00FC4D0E /* AppDelegate.m in Sources */,
 				EA9919291872168000FC4D0E /* UIView+Additions.m in Sources */,
 				EA9918F018720BBB00FC4D0E /* main.m in Sources */,
@@ -299,6 +303,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA99191218720BBB00FC4D0E /* DynamicCategoryPropertiesTests.m in Sources */,
+				526BFE281BA6EE7A007B5348 /* BasicObject.m in Sources */,
+				526BFE2F1BA6EF7F007B5348 /* NSObject+DZLCategoryProperties.m in Sources */,
+				526BFE2B1BA6EED0007B5348 /* BasicObject+Properties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +453,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DynamicCategoryProperties.app/DynamicCategoryProperties";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -460,7 +466,6 @@
 				);
 				INFOPLIST_FILE = "DynamicCategoryPropertiesTests/DynamicCategoryPropertiesTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -469,7 +474,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DynamicCategoryProperties.app/DynamicCategoryProperties";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -479,7 +483,6 @@
 				GCC_PREFIX_HEADER = "DynamicCategoryProperties/DynamicCategoryProperties-Prefix.pch";
 				INFOPLIST_FILE = "DynamicCategoryPropertiesTests/DynamicCategoryPropertiesTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

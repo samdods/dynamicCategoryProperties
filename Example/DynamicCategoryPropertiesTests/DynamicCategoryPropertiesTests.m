@@ -8,6 +8,8 @@
 
 #import <XCTest/XCTest.h>
 
+#import "BasicObject+Properties.h"
+
 @interface DynamicCategoryPropertiesTests : XCTestCase
 
 @end
@@ -26,9 +28,34 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testBasic
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    BasicObject *a = [BasicObject new];
+    a.propertyA = @(1);
+    
+    XCTAssertEqualObjects(a.propertyA, @(1));
+    XCTAssertNotEqualObjects(a.propertyA, @(2));
+}
+
+- (void)testTwoProperties
+{
+    BasicObject *a = [BasicObject new];
+    a.propertyA = @(1);
+    a.propertyB = @(2);
+    
+    XCTAssertEqualObjects(a.propertyA, @(1));
+    XCTAssertEqualObjects(a.propertyB, @(2));
+}
+
+- (void)testTwoObjects
+{
+    BasicObject *a = [BasicObject new];
+    BasicObject *b = [BasicObject new];
+    a.propertyA = @(1);
+    b.propertyA = @(2);
+    
+    XCTAssertEqualObjects(a.propertyA, @(1));
+    XCTAssertEqualObjects(b.propertyA, @(2));
 }
 
 @end
